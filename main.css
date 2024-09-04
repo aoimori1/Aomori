@@ -12,8 +12,7 @@ body{width: 100%;
     overflow: hidden;
 }
 
-#video{width: 100%;
-height: auto;}
+
     @keyframes fadein {
       0% {opacity: 0}
       100% {opacity: 1}
@@ -316,7 +315,11 @@ margin-top: 80px;}
 
 
 
-
+                    #video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
 
 
 .syousai{margin-top: -42px;
@@ -425,6 +428,3 @@ margin-top: 100px;}
 
 
 
-
-#video{width: 100%;
-    height: auto;}
