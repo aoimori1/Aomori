@@ -1,0 +1,609 @@
+@charset "utf-8";
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+body{font-family:"a-otf-ryumin-pr6n", serif;}
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*#video2 {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}*/
+#video2 {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#midasi0{position: absolute;
+left: 26%;
+font-size: 14px;
+color: #fff;
+top: 40%;
+letter-spacing: 1px;
+text-shadow: 0 0 15px #5a5a5a;
+animation: fadein 3s ease-out forwards;
+}
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+/*見出し設定*/
+#midasi2{
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    top: 45.5%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color:#fff;
+    font-size: 25px;
+    text-shadow: 0 0 15px #5a5a5a;
+    animation: fadein 3s ease-out forwards;
+}
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+#midasi{position: absolute;
+    top: 48.4%;
+    left: 35%;
+    color: #fff;
+    font-size: 9px;
+    animation: fadein 3s ease-out forwards;
+}
+
+@keyframes fadein {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+  
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+  padding:300px 0;
+  text-align: center;
+  background-color: #000000;
+    opacity: 0.6;
+}
+
+
+/*スクロールすると文字が浮かび上がる*/
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.fadein {
+    opacity: 0;
+    transform: translate(0,0);
+    transition: all 1.5s;
+  &.fadein-left{
+      transform: translate(-30px,0);
+  }
+  &.fadein-right{
+      transform: translate(30px,0);
+  }
+  &.fadein-up{
+      transform: translate(0,-30px);
+  }
+  &.fadein-bottom{
+      transform: translate(0,30px);
+  }
+  &.scrollin{
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+}
+
+a{font-family:"a-otf-ryumin-pr6n", serif;;}
+
+
+
+
+
+.box{width: 100%;
+height: 50px;}
+.annnai0{position: relative;
+    margin-top: 0px;
+color: #d7d7d7;
+font-size: 50%;
+padding-left: 20px;}
+
+.annnai1{
+color: #fff;
+font-family:"a-otf-ryumin-pr6n", serif;
+font-weight: auto;
+font-style: normal;
+letter-spacing: 2px;
+font-size: 70%;
+padding-left: 20px;}
+
+
+.yoko li {
+    list-style: none;
+    padding: 6px;
+   
+
+  }
+.yoko ul {
+    display: flex;
+    overflow-x: scroll;
+    
+  }
+.image1{width: 300px}
+.gakka{width: 100%;
+padding-top: 20px;
+}
+
+.box1{width: 100%;
+    margin-top: 40px;
+height: 450px;
+background-color: #ffffff;}
+
+.news{
+    color: #686868;
+    text-align: center;
+    letter-spacing: 6px;
+}
+.show{letter-spacing: 3.5px;
+text-align: center;
+font-size: 70%;
+font-weight: 100;}
+
+.box3{width: 100%;
+    height: 660px;
+   
+background-attachment: fixed;
+background-size:cover;
+background-position:top;
+background-image: url(image/haikei.jpg);
+/*background-size: auto 100%;*/
+overflow:hidden
+
+}
+
+
+    
+.bunn1{width: 100%;
+margin-top: -30%;
+position: relative;
+}
+
+
+.setumeiyo{position: relative;
+font-size: 13px;
+color: #fff;
+top: 28%;
+letter-spacing: 2px;
+margin-left: 30px;
+}
+
+.setumei{position: relative;
+
+color: #fff;
+top: 27%;
+font-size: 26px;
+letter-spacing: 2px;
+margin-left: 30px;
+}
+
+.syoukai{position: relative;
+    font-size: 9px;
+    top: 28%;
+   border-top: solid 0.4px #ccc;
+   width: 60%;
+    letter-spacing: 2px;
+color: #fff;
+margin-left: 30px;
+}
+
+.tenzi{
+    width: 100%;
+    height: 660px;
+
+}
+.sakuhin2{
+    width: 100%;
+       
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-image: url(image/sakuhin.jpg);
+    background-size: auto 100%;
+    overflow:hidden
+
+  
+    }
+    .fade-container {
+        opacity: 0;
+        transform: translateY(30px); /* Adjust the initial vertical position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      
+      .fade-container.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+.setumei2{position: relative;
+
+        color: #fff;
+        top: 27%;
+        font-size: 26px;
+        letter-spacing: 2px;
+        margin-left: 30px;
+        }
+        
+        .syoukai2{position: relative;
+            font-size: 9px;
+            top: 28%;
+           border-top: solid 0.4px #ccc;
+           width: 60%;
+            letter-spacing: 2px;
+        color: #fff;
+        margin-left: 30px;
+        }
+.sita{height: 650px;
+
+
+background-color: #fff;
+
+
+}
+
+
+
+
+
+
+.box5{width: 100%;
+    height: 200px;
+    }
+
+
+
+
+
+
+
+    
+
+/*ハンバーガーメニュー*/
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ccc;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #000000;
+}
+.menu-content ul {
+    padding: 70px;
+   text-align:left;
+    display: block;
+
+}
+.menu-content ul li {
+    list-style: none;
+}
+
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 30px 15px 10px 0;
+    position: relative;
+    
+}
+.menu-content ul li a:hover{text-shadow: 0 0 5px #ffffff;
+text-decoration: underline;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #292929;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}/*ここまでハンバーガー*/
+
+
+
+/*スクロールすると背景が変わる*/
+#wrap {padding-bottom: 10px;}
+#header {margin-bottom: 30px;}
+
+h1 a:hover {text-decoration: underline;}
+#article {
+    width: 100%;
+    margin: 0 auto;
+}
+div.section {
+    margin-top: -180%;
+
+    height: 600px;
+    margin-bottom: 20px;   
+}
+
+#bg1, #bg2, #bg3/* ,#bg3, #bg4 */{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#bg1 {background: #000;
+opacity: 0.38;}
+
+
+/*
+#bg3 {background: #ccc;}
+#bg4 {background: #999;}*/
+
+
+
+
+
+/*==================================================
+ニュースティッカーのためのcss
+===================================*/
+/*ニュース1行の周りの余白*/
+.slider a{
+    display: block;
+    background:#fff;
+    padding:20px;
+}
+
+/*日付*/
+.slider span {
+    display:inline-block;
+    font-size:0.8rem;
+    margin-right:10px;
+    color:#777;
+}
+
+/*768px以下の見た目　※1行のままにしたい場合は不要*/
+@media screen and (max-width:768px) {
+    .slider {
+        padding:20px;
+        background:#fff;
+        
+    }
+
+    .slider li {
+        border-bottom:1px solid #ccc;
+        font-size: 70%;
+        list-style: none;
+       
+    }
+
+    .slider li:last-child {
+        border-bottom:none;
+    }
+    .slider span {
+        display:block;
+    padding-bottom:10px;
+    font-size: 70%;
+    letter-spacing: 2px;
+    }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+
+.wrapper {
+    width:90%;
+    margin:0 auto;
+}
+
+
+
+a {
+    color:#333;
+    text-decoration:none;
+}
+
+h3{
+    color: #535353;
+margin-left: 50px;
+margin-top: -20px;
+font-family:"a-otf-ryumin-pr6n", serif;
+
+letter-spacing: 1px;
+}
+
+.botan3{
+    width: 18%;
+height: auto;
+margin-left: 60px;
+margin-top: 30px;
+}
+.please{font-size: 10px;
+margin-top: 0px;
+margin-left: 50px;
+color: #777;}
+
+.koutuu{margin-top: 10px;}
+
+/*==================================================
+ニュースティッカーのためのcss
+===================================*/
+/*ニュース1行の周りの余白*/
+.slider1 a{
+    display: block;
+    background:#fff;
+   
+}
+
+/*768px以下の見た目　※1行のままにしたい場合は不要*/
+@media screen and (max-width:768px) {
+    .slider1 {
+       opacity: 0.7;
+        background:#fff;
+        
+        
+    }
+
+    .slider1 li {
+        border-bottom:1px solid #ccc;
+        
+        font-size: 14px;
+        list-style: none;
+        line-height: 50px;
+       
+    }
+
+    .slider1 li:last-child {
+        border-bottom:none;
+    }
+    .slider1 span {
+        display:block;
+    padding-bottom:10px;
+    font-size: 70%;
+    letter-spacing: 2px;
+    }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+
+.wrapper1 {
+    width:70%;
+    margin:0 auto;
+}
+.insta{width: 7%;
+    height: auto;
+    margin-left: 60px;
+margin-top: 40px;
+}
+
+
+.tyosaku{font-size: 10px;
+margin-top: 170px;
+background-color: #fff;
+    text-align: center;
+    color: #686868;
+}
+.boxes{background-color: #fff;
+height: 40px;
+width: 100%;}
+
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s,visibility 1s, transform 1s;
+}
+
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}

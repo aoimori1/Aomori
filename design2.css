@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+} 
+body{font-family:"a-otf-ryumin-pr6n", serif;}
+#video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ccc;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #000000;
+}
+.menu-content ul {
+    padding-left: 70px;
+    padding-top: 70px;
+   text-align: left;
+    display: block;
+
+}
+.menu-content ul li {
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 30px 15px 10px 0;
+    position: relative;
+    
+}
+.menu-content ul li a:hover{text-shadow: 0 0 5px #ffffff;
+text-decoration: underline;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #292929;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}/*ここまでハンバーガー*/
+
+
+.content__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+.content__wrap p {
+    padding: 50px;
+    position: relative;
+    z-index: 20;
+}
+.content-wrap--bg p {
+    color: #fff;
+}
+.content-wrap--bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    z-index: 0;
+}
+.content-wrap--bg.show::before {
+    opacity: 0.3;
+}
+.content-wrap--bg001::before {
+    background: #fff;
+    opacity: 0;
+}
+.container {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the initial vertical position */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  
+#midasi{color: #dddddd;
+font-size: 20px;
+margin-top: 20px;
+margin-left: 15px;
+letter-spacing: 1px;
+text-shadow: 0 0 15px #5a5a5a;
+animation: fadein 3s ease-out forwards;
+}
+
+@keyframes fadein {
+0% {opacity: 0}
+100% {opacity: 1}
+}
+#midasi2{color: #ddd;
+margin-left: 15px;
+font-size: 11px;
+margin-top: -4px;
+text-shadow: 0 0 15px #5a5a5a;
+animation: fadein 3s ease-out forwards;
+}
+
+@keyframes fadein {
+0% {opacity: 0}
+100% {opacity: 1}
+}
