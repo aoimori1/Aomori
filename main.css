@@ -12,7 +12,8 @@ body{width: 100%;
     overflow: hidden;
 }
 
-    
+#video{width: 100%;
+height: auto;}
     @keyframes fadein {
       0% {opacity: 0}
       100% {opacity: 1}
@@ -425,3 +426,5 @@ margin-top: 100px;}
 
 
 
+#video{width: 100%;
+    height: auto;}
